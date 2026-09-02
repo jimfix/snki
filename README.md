@@ -119,9 +119,7 @@ how the enhancement code should be written.
 
 The exercises follow.
 
-# Test Suite Exercises
-
-## Exercise: Write tests
+# Exercise: Write tests
 
 Below this item (after the `--tree` one) are a list of exercises that
 direct you to enhance the interpreter in some way. Write a series of
@@ -205,9 +203,7 @@ Since the **MiniSnek** conforms to **Python**, both its syntax and (most of its 
 Submit at least 20 `.snk` files along with the `.inpt` and `.gold` files that
 come with each. At least 10 of these should be working **Snek** code. At least 10 of these `.snk` test files should include some `ERROR` among their `.gold` outputs.
 
-# Interpreter Enhancement Exercises
-
-## Exercise: `--dump` for `Stmt`
+# Exercise: `--dump` for `Stmt`
 
 I've written code for the `dump` methods of several `AST` node types. 
 These output to `cout` a textual representation of the parse tree for the SLPY program after it has been parsed. 
@@ -252,7 +248,7 @@ Write these methods.
 You do not need to write special tests for this exercise.
 You can, however, easily use the tests you write to check your AST output.
 
-# Interpreter Enhancement Exercises
+# Exercises: extend the language
 
 ## Exercise: right-associative `**`
 
