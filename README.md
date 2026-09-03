@@ -148,6 +148,8 @@ You need only have one `.inpt` (and hence only one `.gold`) for each
 `.snk` you produce. Even so, you might find it useful for your own testing
 to have several input files for a script.
 
+Put all tests in the `tests` directory here, and disambiguate with initials.
+
 **Example**
 
 Just as a concrete example, suppose I had an **Exercise 3.99** that asked you
