@@ -335,7 +335,9 @@ void Lkup::output(std::ostream& os) const {
 }
 
 void Inpt::output(std::ostream& os) const {
-    os << "input(\"" << prpt << "\")";
+    os << "input(";
+    prpt->output(os);
+    os << ")";
 }
 
 void IntC::output(std::ostream& os) const {
