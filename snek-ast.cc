@@ -47,7 +47,7 @@ Expn::Expn(Locn lo) : AST {lo} { }
 BiOp::BiOp(std::string op, Expn_ptr lf, Expn_ptr rg, Locn lo)
 : oper {op}, left {lf}, rght {rg}, sigs {}, Expn {lo}  { }
 Plus::Plus(Expn_ptr lf, Expn_ptr rg, Locn lo)
-: BiOp{"-",lf,rg,lo} {
+: BiOp{"+",lf,rg,lo} {
     // Add two integers.
     addRule("int", "int", [](Valu l, Valu r) {
         return Valu {std::get<int>(l) + std::get<int>(r)};
@@ -58,7 +58,7 @@ Plus::Plus(Expn_ptr lf, Expn_ptr rg, Locn lo)
     });
 }
 Tmes::Tmes(Expn_ptr lf, Expn_ptr rg, Locn lo)
-: BiOp{"-", lf, rg, lo} {
+: BiOp{"*", lf, rg, lo} {
     // Multiply two integers.
     addRule("int", "int",
             [](Valu l, Valu r) {
@@ -335,7 +335,9 @@ void Lkup::output(std::ostream& os) const {
 }
 
 void Inpt::output(std::ostream& os) const {
-    os << "input(\"" << prpt << "\")";
+    os << "input(";
+    prpt->output(os);
+    os << ")";
 }
 
 void IntC::output(std::ostream& os) const {
